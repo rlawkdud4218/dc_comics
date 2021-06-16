@@ -1,0 +1,204 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #666;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#main_header {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background: black;
+  text-align: center;
+}
+
+h1.logo_title {
+  padding-top: 10px;
+}
+
+h1.logo_title img {
+  width: 80px;
+}
+
+#gnb {
+  position: absolute;
+  right: 0;
+  top: 40px;
+}
+
+#gnb > ul > li {
+  float: left;
+  width: 100px;
+  padding: 5px 0;
+  /* outline: 1px solid green; */
+  font-size: 14px;
+  text-align: center;
+}
+
+#gnb > ul > li.event {
+  background: #0078f0;
+  padding-right: 40px;
+  margin-left: 2em;
+  position: relative;
+}
+
+#gnb > ul > li.event:before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  /* background: red; */
+  position: absolute;
+  left: -30px; top: 0;
+  background-image: url(images/event-triangle-bg.svg);
+}
+#gnb > ul > li.event > a > span {
+  margin-left: 1em;
+}
+
+#gnb > ul > li > a {
+  color: white;
+  text-transform: uppercase;
+  /* margin-left: 0px; */
+  display: block;
+  /* outline: 1px solid red; */
+}
+
+#gnb > ul > li:last-child > a {
+  color: #fff;
+}
+
+/* 2단계 메뉴 구현 */
+#gnb .depth2 {
+  /* background: #ccc; */
+  margin-top: 35px;
+  padding: 10px;
+  display: none; /* 기본은 비표시 */
+}
+
+/* 복합 선택자: 상태선택자 > 자식(후손) 
+  1단계 메뉴가 hover시 후손 .depth2가 표시 
+*/
+#gnb > ul > li:hover > .depth2{
+  display: block;
+  background-color: white;
+}
+
+#gnb .depth2 > li {
+  padding: 5px;
+}
+#gnb .depth2 > li > a {
+  color: black;
+}
+
+/* 1단계 메뉴 hover시 밑줄 효과 */
+#gnb > ul > li > a:hover {
+  text-decoration: underline;
+  color: #0078f0;
+}
+
+#gnb > ul > li:last-child > a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* 2단계 메뉴 hover시 텍스트 하이라이트 효과 */
+#gnb .depth2 > li > a:hover {
+  /* 글자색: 흰색, 불투명도 75%(0.75) */
+  color: rgba(0,0,0,0.75);
+}
+
+
+section {
+  width: 100%;
+  height: 500px;
+  text-align: center;
+}
+
+#comics, #movies, #kids {
+  background-color: #ccc;
+  background-size: cover;
+  background-position: center center;
+}
+
+#comics {
+  background-image: url(images/dc1.jpg);
+}
+
+#movies {
+  background-image: url(images/dc2.jpg);
+}
+
+#kids {
+  background-image: url(images/dc3.jpg);
+}
+
+.section_nav {
+  margin-top: 1em;
+}
+
+.section_nav > ul > li {
+  display: inline-block;
+  color: #fff;
+}
+
+.section_nav > ul > li > a {
+  color: #fff;
+  text-shadow: 2px 3px 4px #000;
+}
+
+.section_nav > ul > li > span {
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 13px;
+  color: rgba(255,255,255);
+}
+
+.section_group {
+  /* outline: 2px solid red; */
+  padding-top: 170px;
+}
+
+.section_group h2 img {
+  width: 250px;
+}
+
+/* footer
+height:50px, 
+bgcolor : 363636
+text : #9b9b9b
+*/
+#main_footer { 
+  background: #363636;
+  color: hsl(0, 0%, 61%);
+  height: 50px;
+  padding: 0 50px;
+}
+
+#main_footer a {
+  color: #9b9b9b;
+}
+
+.copy {
+  font-size: 10px;
+  text-align: center;
+}
+
+.left {
+  float: left;
+  margin-top: 10px;
+}
